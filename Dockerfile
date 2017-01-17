@@ -4,6 +4,6 @@ RUN wget -O /usr/local/bin/dumb-init https://github.com/Yelp/dumb-init/releases/
 RUN chmod +x /usr/local/bin/dumb-init
 WORKDIR /opt
 ADD krb5.conf /etc/
-ADD krb5kdc/* /var/lib/krb5kdc/
+RUN kdb5_util create -s -P Welcome1
 ADD launcher.sh .
 ENTRYPOINT ["/usr/local/bin/dumb-init", "--", "/opt/launcher.sh"]
