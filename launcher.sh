@@ -1,5 +1,6 @@
 #!/bin/bash
 set -e
+/root/issuer &
 krb5kdc -n &
 sleep 2
 kadmind -nofork &
