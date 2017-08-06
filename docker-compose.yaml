@@ -1,0 +1,7 @@
+version: "2"
+services:
+   krb5:
+      image: flokkr/krb5
+      ports:
+        - 8081:8081  
+

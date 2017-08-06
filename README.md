@@ -1,4 +1,4 @@
-Experimental krb5 Kerberos container. (WORK IN PROGRESS)
+# Experimental UNSECURE krb5 Kerberos container.
 
 Only for development. Not for production.
 
