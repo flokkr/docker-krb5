@@ -1,0 +1,25 @@
+name: krb5/configure
+description: Add krb5.conf configuration
+---
+- type: add
+  path: 
+    - spec
+    - template
+    - spec
+    - volumes
+  value:
+    - name: krb5conf
+      configMap:
+        name: krb5-conf
+- type: add
+  path: 
+    - spec
+    - template
+    - spec
+    - (initC|c)ontainers
+    - .*
+    - volumeMounts
+  value:
+    - name: krb5conf
+      mountPath: /etc/krb5.conf
+      subPath: krb5.conf
