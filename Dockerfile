@@ -11,6 +11,5 @@ RUN kdb5_util create -s -P Welcome1
 RUN kadmin.local -q "addprinc -randkey admin/admin@EXAMPLE.COM"
 RUN kadmin.local -q "ktadd -k /tmp/admin.keytab admin/admin@EXAMPLE.COM"
 ADD launcher.sh .
-ADD issuer /root/issuer
 RUN mkdir -p /data
 ENTRYPOINT ["/usr/local/bin/dumb-init", "--", "/opt/launcher.sh"]
