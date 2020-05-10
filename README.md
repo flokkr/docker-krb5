@@ -2,8 +2,6 @@
 
 Only for development. Not for production.
 
-The docker image contains a rest service which provides keystore and keytab files without any authentication!
-
 Master password: Welcome1
 
 Principal: admin/admin@EXAMPLE.COM Password: Welcome1
